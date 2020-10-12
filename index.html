@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kao.web.tr</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        .nav-wrapper {
+            padding: 0 1rem;
+        }
+
+        nav .brand-logo {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bolder;
+        }
+
+        main {
+            margin-top: 2rem;
+        }
+
+        .card .card-image .card-title {
+            font-weight: 400 !important;
+        }
+
+        .card .card-image .image {
+            filter: brightness(0.7);
+
+            height: 128px;
+            width: auto;
+
+            background-position: top;
+            background-size: 100%;
+        }
+
+        .card .card-action a.disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body class="grey darken-4">
+    <div id="vue-app">
+        <div class="container">
+            <nav>
+                <div class="nav-wrapper indigo">
+                    <a onclick="app.isAboutPage = false" href="#" class="brand-logo">KAÖ</a>
+                    <ul id="nav-mobile" class="right">
+                        <li><a onclick="app.isAboutPage = !app.isAboutPage" href="#">{{isAboutPage ? "Projelerim" : "Hakkımda"}}</a></li>
+                        <li><a href="https://github.com/TheArmagan">Github</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main>
+
+                <div v-if="!isAboutPage">
+
+                    <div class="row">
+                        <div class="col s12 m6 l4 xl3">
+                            <div class="card grey darken-3">
+                                <div class="card-image">
+                                    <div class="image" style="background-image: url('https://i.imgur.com/Q4xTqDT.png');"></div>
+                                    <span class="card-title">JPATH</span>
+                                </div>
+                                <div class="card-content white-text">
+                                    <p>Kolay bir şekilde json objesinin içerisinde gezinmenizi sağlar!</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="https://thearmagan.github.io/JPATH">Siteye Git</a>
+                                    <a href="https://github.com/TheArmagan/JPATH">Github</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l4 xl3">
+                            <div class="card grey darken-3">
+                                <div class="card-image">
+                                    <div class="image" style="background-image: url('https://i.imgur.com/pXtyU4V.png');"></div>
+                                    <span class="card-title">DABOX</span>
+                                </div>
+                                <div class="card-content white-text">
+                                    <p>Sınırsız miktarda dosya yükleyebildiğiniz bir site!</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="https://da-box.herokuapp.com/">Siteye Git</a>
+                                    <a class="disabled" href="#">Github</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l4 xl3">
+                            <div class="card grey darken-3">
+                                <div class="card-image">
+                                    <div class="image" style="background-image: url('https://i.imgur.com/xrQUfTN.png');"></div>
+                                    <span class="card-title">CLICKCOLOR</span>
+                                </div>
+                                <div class="card-content white-text">
+                                    <p>Gerçek zamanlı olarak renk değiştirebildiğiniz ve renk değiştiğinde POST requesti attırabildiğiniz bir site.<br></p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="https://clickcolor.herokuapp.com/">Siteye Git</a>
+                                    <a href="https://github.com/TheArmagan/clickcolor">Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div v-if="isAboutPage">
+
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="card-panel grey darken-3 white-text">
+                                <p>Hakkımda kısmı henüz yok. 😌</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#vue-app",
+            data: {
+                isAboutPage: false
+            }
+        })
+    </script>
+</body>
+
+</html>
