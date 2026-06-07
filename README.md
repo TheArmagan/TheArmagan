@@ -1,4 +1,4 @@
 i do stuff
 
 
-[![Now Playing Spotify](https://svg-spotify-status.thearmagan.workers.dev/?no_stream=true)](https://svg-spotify-status.thearmagan.workers.dev/)
+[![now playing](https://msk.armagan.rest/svg/338848346342949447?no_stream=true&theme=ocean)](https://musicsocket.armagan.rest)
