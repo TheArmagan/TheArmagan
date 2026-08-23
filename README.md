@@ -1,4 +1,1 @@
-i do stuff
-
-
-[![now playing](https://msk.armagan.rest/svg/339557804580798656?no_stream=true&theme=auto&layout=disc)](https://musicsocket.armagan.rest)
+I do VRChat stuff, and I'm very happy about it. I used to be doing Minecraft stuff, but got no luck.
